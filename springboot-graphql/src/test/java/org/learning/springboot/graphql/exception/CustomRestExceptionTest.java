@@ -3,7 +3,7 @@ package org.learning.springboot.graphql.exception;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.learning.springboot.graphql.entity.Books;
+import org.learning.springboot.graphql.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,7 +35,7 @@ public class CustomRestExceptionTest {
     @Test
     public void handleAllExceptionTest() throws Exception {
 
-        Books book=new Books();
+        Book book=new Book();
         book.setPrice(new BigDecimal(123));
        // book.setName("Spring Boot");
 

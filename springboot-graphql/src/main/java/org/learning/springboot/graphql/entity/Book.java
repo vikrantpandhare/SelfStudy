@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @Entity
-public class Books {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

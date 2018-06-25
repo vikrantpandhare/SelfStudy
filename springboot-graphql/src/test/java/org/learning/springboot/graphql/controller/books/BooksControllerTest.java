@@ -3,8 +3,8 @@ package org.learning.springboot.graphql.controller.books;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import org.learning.springboot.graphql.entity.Books;
+import org.learning.springboot.graphql.controller.rest.BooksController;
+import org.learning.springboot.graphql.entity.Book;
 import org.learning.springboot.graphql.repository.BooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -43,7 +43,7 @@ public class BooksControllerTest {
 
     @Test
     public void addBooks() throws Exception{
-Books book=new Books();
+Book book=new Book();
 book.setPrice(new BigDecimal(123));
 book.setName("Spring Boot");
         mockMvc.perform(post("/addbook")
